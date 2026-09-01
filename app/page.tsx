@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { Navbar, NavTab } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { ServicesSection } from '@/components/ServicesSection';
-import { ApproachSection } from '@/components/ApproachSection';
 import { AdsAcquisitionSection } from '@/components/AdsAcquisitionSection';
 import { PricingOffersSection } from '@/components/PricingOffersSection';
 import { PortfolioSection } from '@/components/PortfolioSection';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { AboutSection } from '@/components/AboutSection';
 import { ContactModal } from '@/components/ContactModal';
 import { Footer } from '@/components/Footer';
@@ -24,7 +24,7 @@ export default function Home() {
       const scrollPosition = window.scrollY + 200;
       const sections: { id: NavTab; offsetTop: number }[] = [];
 
-      (['accueil', 'services', 'approche', 'publicite', 'offres', 'portfolio', 'apropos'] as NavTab[]).forEach((id) => {
+      (['accueil', 'services', 'publicite', 'offres', 'portfolio', 'temoignages', 'apropos'] as NavTab[]).forEach((id) => {
         const el = document.getElementById(id);
         if (el) {
           sections.push({ id, offsetTop: el.offsetTop });
@@ -104,12 +104,7 @@ export default function Home() {
           onNavigatePortfolio={() => handleTabChange('portfolio')}
         />
 
-        {/* 3. Notre Approche (Funnel Visual: Publicité -> Visiteur -> Site -> WhatsApp -> Client) */}
-        <ApproachSection
-          onOpenContact={handleOpenContactWithService}
-        />
-
-        {/* 4. Publicité Digitale (4 Platforms: Facebook, Instagram, TikTok, WhatsApp) */}
+        {/* 3. Publicité Digitale (4 Platforms: Facebook, Instagram, TikTok, WhatsApp) */}
         <AdsAcquisitionSection
           onOpenContact={handleOpenContactWithService}
         />
@@ -124,7 +119,12 @@ export default function Home() {
           onOpenContact={() => setContactModalOpen(true)}
         />
 
-        {/* 9. À propos & Équipe */}
+        {/* 7. Témoignages & Avis Clients */}
+        <TestimonialsSection
+          onOpenContact={() => setContactModalOpen(true)}
+        />
+
+        {/* 8. À propos & Équipe */}
         <AboutSection />
 
         {/* 10. Footer */}

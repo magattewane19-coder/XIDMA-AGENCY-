@@ -66,12 +66,6 @@ export function Footer({ onNavClick, onOpenContact }: FooterProps) {
                 Nos expertises (Web & Ads)
               </button>
               <button
-                onClick={() => onNavClick('approche')}
-                className="text-slate-600 hover:text-[#0284c7] transition-colors text-left cursor-pointer"
-              >
-                Notre approche
-              </button>
-              <button
                 onClick={() => onNavClick('offres')}
                 className="text-slate-600 hover:text-[#0284c7] transition-colors text-left cursor-pointer"
               >
@@ -82,6 +76,12 @@ export function Footer({ onNavClick, onOpenContact }: FooterProps) {
                 className="text-slate-600 hover:text-[#0284c7] transition-colors text-left cursor-pointer"
               >
                 Réalisations
+              </button>
+              <button
+                onClick={() => onNavClick('temoignages')}
+                className="text-slate-600 hover:text-[#0284c7] transition-colors text-left cursor-pointer"
+              >
+                Avis & Témoignages
               </button>
               <button
                 onClick={onOpenContact}

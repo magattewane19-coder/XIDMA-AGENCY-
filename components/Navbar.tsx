@@ -15,16 +15,17 @@ import {
   Flag,
   Sparkles,
   ChevronRight,
+  Star,
 } from 'lucide-react';
 import { Logo } from './Logo';
 
 export type NavTab =
   | 'accueil'
   | 'services'
-  | 'approche'
   | 'publicite'
   | 'offres'
   | 'portfolio'
+  | 'temoignages'
   | 'apropos'
   | 'contact';
 
@@ -65,8 +66,8 @@ export function Navbar({ activeTab, onTabChange, onOpenContactModal }: NavbarPro
     { id: 'services', label: 'Services', icon: Globe, sub: 'Création Web & Pub' },
     { id: 'offres', label: 'Offres & Tarifs', icon: Tag, sub: 'Packs Starter, Business...' },
     { id: 'publicite', label: 'Publicité Digitale', icon: Megaphone, sub: 'Facebook, Insta, TikTok' },
-    { id: 'approche', label: 'Notre Approche', icon: Briefcase, sub: 'Tunnel de conversion' },
     { id: 'portfolio', label: 'Réalisations', icon: ArrowUpRight, sub: 'Études de cas clients' },
+    { id: 'temoignages', label: 'Avis Clients', icon: Star, sub: 'Notes & retours d’expérience' },
     { id: 'apropos', label: 'À Propos', icon: Sparkles, sub: 'Notre agence' },
   ];
 
