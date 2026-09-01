@@ -1,0 +1,6 @@
+{
+  "name": "XIDMA WEB AGENCY",
+  "description": "XIDMA WEB AGENCY accompagne les entreprises au Sénégal avec la création de sites web professionnels, e-commerce, landing pages et la publicité digitale sur Facebook, Instagram, TikTok et WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
